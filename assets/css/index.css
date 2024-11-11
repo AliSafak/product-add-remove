@@ -1,0 +1,258 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: "Red Hat Text";
+    background-color: #fcf8f6;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* -----------------------------CSS RESET KISMI BURADA BİTİYOR */
+
+li div {
+    display: block
+}
+
+
+.catalog {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1216px;
+    margin-inline: auto;
+}
+
+.catalog-section h1 {
+    max-width: 1216px;
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+
+.list-item {
+    position: relative;
+    text-align: center;  
+}
+
+.add-to-card {
+    display: flex;
+    position: absolute;
+    padding: 10px ;
+    background-color: #C73B0F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    max-width: 160px;
+    border-radius: 25px;
+}
+
+.list-item h5 {
+    color: #87635A;
+    font-size: var(--font-sizetext-preset-4);
+    font-weight: 400;
+    line-height: 18.52px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 38px;
+}
+
+.list-item h3 {
+    font-size: var(--spacing200);
+    font-weight: 600;
+    line-height: 21.17px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #260F08;
+}
+
+.list-item p {
+    color: #C73B0F;
+    font-size: var(--spacing200);
+    font-weight: 600;
+    line-height: 21.17px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+
+.payment-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.payment-section button {
+    width: 100%;
+    border: none;
+    background-color: #C73B0F;
+    border-radius: 25px;
+    margin-top: 24px;
+    padding-block: 16px;
+    cursor: pointer;
+    font-size: var(--spacing200);
+    font-weight: 600;
+    line-height: 21.17px;
+    color: white;
+}
+
+.payment-section h1 {
+    font-size: var(--font-sizetext-preset-2);
+    font-weight: 700;
+    line-height: 31.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #C73B0F;
+}
+
+.payment-section-green-area {
+    display: flex;
+    align-items: center;
+    width: 336px;
+    height: 52px;
+    background-color: #FCF8F6; 
+    padding: 0 10px; 
+    border-radius: 8px; 
+    margin-top: 24px;
+}
+
+.payment-section-green-area img {
+    width: 24px; /* Görsel boyutu */
+    height: 24px;
+    margin-right: 10px; /* Görsel ve yazı arasındaki boşluk */
+}
+
+.payment-section-green-area h3 {
+    font-size: 16px; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+@media (width > 375px) {
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .cantainer {
+        padding: 40px;
+        max-width: 688px;
+        margin-inline: auto;
+    }
+}
+
+@media (width > 698px) {
+    .cantainer{
+        display: flex;
+        padding: 88px;
+        max-width: 1216px;
+        margin-inline: auto;
+        align-items: flex-start;
+    }
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .payment-section {
+        width: 384px;
+        height: 542px;
+
+    }
+}
